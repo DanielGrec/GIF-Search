@@ -11,7 +11,8 @@ button.addEventListener('click', () => {
 	fetch(urlWithSearch, { mode: 'cors' })
 		.then((response) => response.json())
 		.then((response) => (img.src = response.data.images.original.url))
-		.catch((e) => {
-			console.log(e);
+		.catch(() => {
+			img.src =
+				'https://media.giphy.com/media/Vbtc9VG51NtzT1Qnv1/giphy.gif';
 		});
 });
